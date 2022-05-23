@@ -1,5 +1,6 @@
 import NavBar from "./componenti/NavBar";
-import TabellaContatti from "./componenti/TabellaContatti";
+import TabellaContatti from "./componenti/Contatto/TabellaContatti";
+import NuovoContatto from "./componenti/NuovoContatto/NuovoContatto";
 
 function App() {
   const dati = [
@@ -28,6 +29,7 @@ function App() {
     <div>
       <NavBar></NavBar>
       <TabellaContatti infoContatto={dati}></TabellaContatti>
+      <NuovoContatto></NuovoContatto>
     </div>
   );
 }

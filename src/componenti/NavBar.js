@@ -1,3 +1,4 @@
+//componente navbar, va subito direttamente in App.js
 function NavBar() {
   return (
     <nav className="navbar navbar-dark bg-dark">

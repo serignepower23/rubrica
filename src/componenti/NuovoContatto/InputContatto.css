@@ -1,0 +1,16 @@
+.form-control {
+  width: 500px;
+}
+
+.row {
+  margin: 50px auto;
+  width: 1200px;
+}
+
+.btn-form {
+  margin-left: 250px;
+}
+
+.box-btn {
+  background-color: aqua;
+}

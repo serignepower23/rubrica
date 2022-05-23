@@ -1,7 +1,16 @@
 import InputContatto from "./InputContatto";
 
 function NuovoContatto() {
-  return <InputContatto></InputContatto>;
+  const savedaticontattoHeandler = function (enteredDatiContatto) {
+    const datiContatto = {
+      ...enteredDatiContatto,
+    };
+  };
+  return (
+    <InputContatto
+      onSavedaticontatto={savedaticontattoHeandler}
+    ></InputContatto>
+  );
 }
 
 export default NuovoContatto;

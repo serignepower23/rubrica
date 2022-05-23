@@ -27,6 +27,7 @@ function InputContatto() {
 
   //ora creaiamo una funzione per gestire il submit dell'utente
   function submitHeadler(evento) {
+    evento.preventDefault(); ///usato per evitare refresh pagina al click
     if (
       //preveniamo il salvataggio di input vuoti con questo semplice if ed else
       enteredFirstName != "" &&
@@ -34,8 +35,6 @@ function InputContatto() {
       enteredPhoneNumber != "" &&
       enteredEmailAdress != ""
     ) {
-      evento.preventDefault(); ///usato per evitare refresh pagina al click
-
       var datiContatto = {
         //creazione oggetto che useremo per salvare i dati
         firstName: enteredFirstName,
@@ -44,7 +43,16 @@ function InputContatto() {
         emailAdress: enteredEmailAdress,
       };
       console.log(datiContatto);
+      /* negli elementi input abbiamo settato il loro value uguale allo state,
+    quindi qui resettiamo(semplicemente lo si fa diventare stringa vuota) quel value in modo che si possa continuare ad aggiungere
+    valori una volta fatto il submit senza dover ricaricare la pagina o cancellare cioè che l'utente
+    aveva scritto */
+      setEnterdFirstName("");
+      setEnterdLastName("");
+      setEnterdPhoneNumber("");
+      setEnterdEmailAdress("");
     } else alert("non tutti i campi sono stati completati");
+
     console.log(datiContatto);
   }
 

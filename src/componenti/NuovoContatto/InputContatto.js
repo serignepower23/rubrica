@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./InputContatto.css";
 
-function InputContatto() {
+function InputContatto(props) {
   //creazione degli state per gestire input dal form
   const [enteredFirstName, setEnterdFirstName] = useState("");
   const [enteredLastName, setEnterdLastName] = useState("");
@@ -42,7 +42,7 @@ function InputContatto() {
         phoneNumber: enteredPhoneNumber,
         emailAdress: enteredEmailAdress,
       };
-      console.log(datiContatto);
+      console.log("dati contatto in InputContatto: \n", datiContatto);
       /* negli elementi input abbiamo settato il loro value uguale allo state,
     quindi qui resettiamo(semplicemente lo si fa diventare stringa vuota) quel value in modo che si possa continuare ad aggiungere
     valori una volta fatto il submit senza dover ricaricare la pagina o cancellare cioè che l'utente
@@ -53,7 +53,9 @@ function InputContatto() {
       setEnterdEmailAdress("");
     } else alert("non tutti i campi sono stati completati");
 
-    console.log(datiContatto);
+    /* inviamo il dato al componente NuovoContatto.js usando evento creato da noi.
+    in questo caso il salvataggio di un dato*/
+    props.onSavedaticontatto(datiContatto);
   }
 
   //ritorno del form all'interno della pagina, finisce prima dentro NuovoContatto

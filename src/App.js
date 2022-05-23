@@ -25,11 +25,15 @@ function App() {
       email: "paopar@gmail.com",
     },
   ];
+  function addContactHeandler(contatto) {
+    //verifica che il dato sia arrivato correttamente a questo componente
+    console.log("dati contatto in app: \n", contatto);
+  }
   return (
     <div>
       <NavBar></NavBar>
       <TabellaContatti infoContatto={dati}></TabellaContatti>
-      <NuovoContatto></NuovoContatto>
+      <NuovoContatto onAddContact={addContactHeandler}></NuovoContatto>
     </div>
   );
 }

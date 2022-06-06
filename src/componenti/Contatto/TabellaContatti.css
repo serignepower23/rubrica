@@ -2,3 +2,8 @@
   margin: 50px auto;
   width: 1200px;
 }
+
+.tabella {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}

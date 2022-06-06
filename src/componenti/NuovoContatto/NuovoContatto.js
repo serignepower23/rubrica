@@ -1,5 +1,5 @@
 import InputContatto from "./InputContatto";
-
+let aggiorna = false;
 function NuovoContatto(props) {
   //la funzione salverà il dato nuovamente e lo manderemo ad App.js
   const savedaticontattoHeandler = function (enteredDatiContatto) {
@@ -13,6 +13,7 @@ function NuovoContatto(props) {
   };
   return (
     <InputContatto
+      onAggiorna={aggiorna}
       onSavedaticontatto={
         savedaticontattoHeandler
       } /* creiamo evento di salvataggio dati */

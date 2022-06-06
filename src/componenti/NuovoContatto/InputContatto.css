@@ -12,5 +12,15 @@
 }
 
 .box-btn {
-  background-color: aqua;
+  /* background-color: aqua */
+}
+
+form {
+  /* background-color: antiquewhite; */
+  padding: 5px;
+}
+
+.input_contatto {
+  margin: 200px auto;
+  width: 1200px;
 }

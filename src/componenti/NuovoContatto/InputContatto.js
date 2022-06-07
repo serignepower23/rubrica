@@ -19,9 +19,9 @@ function InputContatto(props) {
     setEnterdLastName(evento.target.value);
   };
 
-  /* const phoneNumber_InputHeandler = (evento) => {
+  const phoneNumber_InputHeandler = (evento) => {
     setEnterdPhoneNumber(evento.target.value);
-  }; */
+  };
   const emailAdress_inputHeandler = (evento) => {
     setEnterdEmailAdress(evento.target.value);
   };
@@ -33,7 +33,8 @@ function InputContatto(props) {
       //preveniamo il salvataggio di input vuoti con questo semplice if ed else
       enteredFirstName != "" &&
       enteredLastName != "" &&
-      enteredEmailAdress != ""
+      enteredEmailAdress != "" &&
+      enteredPhoneNumber != ""
     ) {
       var datiContatto = {
         //creazione oggetto che useremo per salvare i dati
@@ -41,6 +42,7 @@ function InputContatto(props) {
         nome: enteredFirstName,
         cognome: enteredLastName,
         email: enteredEmailAdress,
+        numero: enteredPhoneNumber,
       };
       props.onSavedaticontatto(datiContatto);
       console.log("dati contatto in InputContatto: \n", datiContatto);
@@ -51,6 +53,7 @@ function InputContatto(props) {
       setEnterdFirstName("");
       setEnterdLastName("");
       setEnterdEmailAdress("");
+      setEnterdPhoneNumber("");
     } else alert("non tutti i campi sono stati completati");
 
     /* inviamo il dato al componente NuovoContatto.js usando evento creato da noi.
@@ -84,8 +87,17 @@ function InputContatto(props) {
               onChange={lastName_InputHeadler}
             />
           </div>
-        </div>
-        <div class="row">
+          <div class="col">
+            <label for="numero">inserire numero</label>
+            <input
+              id="numero"
+              value={enteredPhoneNumber}
+              type="tel"
+              class="form-control"
+              placeholder="Number Phone"
+              onChange={phoneNumber_InputHeandler}
+            />
+          </div>
           <div class="col">
             <label for="email">inserire email</label>
             <input

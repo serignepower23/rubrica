@@ -6,6 +6,7 @@ function Ricerca(props) {
     setTrovato(event.target.value);
   }
   function onRicerca(event) {
+    event.preventDefault();
     props.onTrovato(trovato);
   }
 

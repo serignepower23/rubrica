@@ -1,10 +1,14 @@
 import Ricerca from "./Ricerca";
+import "./NavBar.css";
 
 //componente navbar, va subito direttamente in App.js
 function NavBar(props) {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav
+        class="navbar navbar-expand-lg 
+        myBar "
+      >
         <a class="navbar-brand" href="#">
           App contatti
         </a>

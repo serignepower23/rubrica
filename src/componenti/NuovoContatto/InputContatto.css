@@ -11,16 +11,24 @@
   margin-left: 250px;
 }
 
-.box-btn {
-  /* background-color: aqua */
+button {
+  color: #cee9b6;
 }
 
-form {
-  /* background-color: antiquewhite; */
+.input_contatto {
+  background-color: #8ce99a;
   padding: 5px;
 }
 
 .input_contatto {
-  margin: 200px auto;
+  margin: 20px auto;
   width: 1200px;
+}
+
+label {
+  font-size: 18px;
+}
+
+.col {
+  margin-bottom: 30px;
 }

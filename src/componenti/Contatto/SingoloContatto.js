@@ -17,6 +17,7 @@ function SingoloContatto(props) {
         <td>{props.nome}</td>
         <td>{props.cognome}</td>
         <td>{props.email}</td>
+        <td>{props.numero}</td>
       </tr>
     </tbody>
   );

@@ -10,24 +10,28 @@ function App() {
       nome: "mark",
       cognome: "otto",
       email: "blaaa",
+      numero: 123456785,
     },
     {
       index: 3,
       nome: "serigne",
       cognome: "fall",
       email: "sergi@gmail.com",
+      numero: 3599886295,
     },
     {
       id: 2,
       nome: "elisa",
       cognome: "giudici",
       email: "eligiudi@gmail.com",
+      numero: 3422427556,
     },
     {
       id: 1,
       nome: "paperino",
       cognome: "paolino",
       email: "paopar@gmail.com",
+      numero: 3843905867,
     },
   ];
   const [aggiunta, setAggiunta] = useState(dummmy_dati);
@@ -50,7 +54,7 @@ function App() {
 
   const [risultato, setRisultato] = useState("");
   function saveTrovatoHeandler(event) {
-    setInputShow(event);
+    setRisultato(event);
   }
 
   return (
